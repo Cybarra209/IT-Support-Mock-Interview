@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Interactive IT Support Specialist Mock Interview"
+    >
+
+    <title>
+        IT Support Specialist Mock Interview
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <header class="header">
+
+        <div class="header-content">
+
+            <h1>
+                💻 IT Support Specialist
+            </h1>
+
+            <p>
+                Interactive Mock Interview
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <!-- INTRO SCREEN -->
+
+        <section
+            id="introScreen"
+            class="intro-screen"
+        >
+
+            <h2>
+                Ready for your mock interview?
+            </h2>
+
+            <p>
+                You will be asked IT Support Specialist
+                interview questions one at a time.
+            </p>
+
+            <p>
+                Answer naturally. The interviewer will
+                evaluate your response and give you
+                feedback before moving to the next question.
+            </p>
+
+
+            <div class="intro-features">
+
+                <div>
+                    🎤
+                    <span>
+                        Realistic Questions
+                    </span>
+                </div>
+
+                <div>
+                    ⭐
+                    <span>
+                        Score Your Answers
+                    </span>
+                </div>
+
+                <div>
+                    🔧
+                    <span>
+                        Learn What To Improve
+                    </span>
+                </div>
+
+                <div>
+                    📊
+                    <span>
+                        Track Your Progress
+                    </span>
+                </div>
+
+            </div>
+
+
+            <button
+                id="startBtn"
+                class="primary-btn"
+            >
+                Start Mock Interview →
+            </button>
+
+        </section>
+
+
+
+        <!-- INTERVIEW SCREEN -->
+
+        <section
+            id="interviewScreen"
+            class="hidden"
+        >
+
+
+            <!-- TOP INFORMATION -->
+
+            <div class="interview-top">
+
+                <div>
+
+                    <span class="small-label">
+                        QUESTION
+                    </span>
+
+                    <h3 id="questionNumber">
+                        Question 1
+                    </h3>
+
+                </div>
+
+
+                <div class="score-display">
+
+                    <span>
+                        Current Average
+                    </span>
+
+                    <strong
+                        id="averageScore"
+                    >
+                        --
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROGRESS -->
+
+            <div class="progress-container">
+
+                <div class="progress-info">
+
+                    <span>
+                        Interview Progress
+                    </span>
+
+                    <span
+                        id="progressText"
+                    >
+                        1 / 20
+                    </span>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progressFill"
+                        class="progress-fill"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- QUESTION CARD -->
+
+            <section
+                class="question-card"
+            >
+
+                <span
+                    id="category"
+                    class="category"
+                >
+                    Troubleshooting
+                </span>
+
+
+                <h2
+                    id="question"
+                >
+                    Loading question...
+                </h2>
+
+            </section>
+
+
+
+            <!-- ANSWER AREA -->
+
+            <section
+                id="answerSection"
+                class="answer-section"
+            >
+
+                <label
+                    for="userAnswer"
+                >
+                    Your Answer
+                </label>
+
+
+                <textarea
+                    id="userAnswer"
+                    placeholder="Type your answer here as if you are in a real interview..."
+                ></textarea>
+
+
+                <div class="answer-footer">
+
+                    <span
+                        id="wordCount"
+                    >
+                        0 words
+                    </span>
+
+
+                    <button
+                        id="submitAnswerBtn"
+                        class="primary-btn"
+                    >
+                        Submit Answer
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- FEEDBACK -->
+
+            <section
+                id="feedbackSection"
+                class="feedback-section hidden"
+            >
+
+
+                <div class="feedback-header">
+
+                    <h2>
+                        Interview Feedback
+                    </h2>
+
+
+                    <div
+                        id="scoreCircle"
+                        class="score-circle"
+                    >
+                        <span
+                            id="score"
+                        >
+                            8
+                        </span>
+
+                        <small>
+                            / 10
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- WHAT WAS GOOD -->
+
+                <div
+                    class="feedback-card good"
+                >
+
+                    <h3>
+                        ✅ What You Did Well
+                    </h3>
+
+                    <ul
+                        id="strengths"
+                    ></ul>
+
+                </div>
+
+
+
+                <!-- IMPROVEMENTS -->
+
+                <div
+                    class="feedback-card improve"
+                >
+
+                    <h3>
+                        🔧 What You Could Improve
+                    </h3>
+
+                    <ul
+                        id="improvements"
+                    ></ul>
+
+                </div>
+
+
+
+                <!-- MISSED POINTS -->
+
+                <div
+                    class="feedback-card tips"
+                >
+
+                    <h3>
+                        💡 Key Things To Remember
+                    </h3>
+
+                    <ul
+                        id="keyPoints"
+                    ></ul>
+
+                </div>
+
+
+
+                <!-- SAMPLE ANSWER -->
+
+                <div
+                    class="sample-answer"
+                >
+
+                    <h3>
+                        🎯 Strong Example Answer
+                    </h3>
+
+                    <p
+                        id="sampleAnswer"
+                    ></p>
+
+                </div>
+
+
+
+                <button
+                    id="nextQuestionBtn"
+                    class="primary-btn next-btn"
+                >
+                    Next Question →
+                </button>
+
+
+            </section>
+
+
+        </section>
+
+
+
+        <!-- RESULTS SCREEN -->
+
+        <section
+            id="resultsScreen"
+            class="results-screen hidden"
+        >
+
+            <h2>
+                🎉 Mock Interview Complete!
+            </h2>
+
+
+            <div
+                class="final-score"
+            >
+
+                <span>
+                    Your Final Score
+                </span>
+
+                <strong
+                    id="finalScore"
+                >
+                    8.5 / 10
+                </strong>
+
+            </div>
+
+
+            <div
+                id="finalMessage"
+                class="final-message"
+            ></div>
+
+
+            <div
+                class="results-actions"
+            >
+
+                <button
+                    id="restartBtn"
+                    class="primary-btn"
+                >
+                    🔄 Start New Interview
+                </button>
+
+
+                <button
+                    id="resetProgressBtn"
+                    class="secondary-btn"
+                >
+                    Reset Saved Progress
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer>
+
+        <p>
+            IT Support Specialist Interview Practice
+        </p>
+
+        <p>
+            Answer naturally. Learn from every response.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
